@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root{
+    --coloruno: #FFFFFF;
+    --colorazulclarouno: #f3f5fc;
+    --colorazulclarodos: #eff1fa;
+    --colorazuloscurouno: #0a3871;
+    --colorazuloscurodos: #495057;
+    --colorgrisclaro: #d8dfe8;
+    --colorgrisoscuro: #343a40;
+    --fuente-inter: "Inter", sans-serif;  
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colorazulclarodos);
+    height: 100%;
+    font-family: var(--fuente-inter);
+}
+
+.header {
+    margin: 40px;
+    text-align: center;
+}
+
+/* Sección principal */
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.contenido{
+    margin: 0 auto;
+    flex: 1;
+    padding: 20px;
+    background-color: transparent;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.text-area{
+    border: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+    background-color: var(--coloruno);
+  }
+  
+  ::placeholder { 
+    color: var(--colorazuloscurouno); 
+}
+
+.alerta{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+ 
+.texto__alerta{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--colorazuloscurodos);
+}
+
+.botones{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.boton__uno, .boton__dos{
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.boton__uno{
+    background-color: var(--colorazuloscurouno);
+    color: var(--coloruno);
+}
+
+.boton__dos{
+    background-color: var(--colorgrisclaro);
+    color: var(--colorazuloscurouno);
+}
+
+/* Sección lateral */
+.caja__lateral{
+    background-color: var(--coloruno);
+    border-radius: 32px;
+    box-shadow: 10px 10px 30px 0px var(--colorgrisoscuro);
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.caja_contenedor{
+    margin: auto;
+    background-color: var(--coloruno);
+}
+
+.imagen{
+    margin-top: 20px;
+    max-width: 80%;
+    height: auto;
+}   
+
+.titulo__destaque{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--colorgrisoscuro);
+    margin-top: 20px;
+}
+
+.titulo__sencillo{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--colorgrisoscuro);
+    margin-top: 10px;
+}
+
+.resultado{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--colorazuloscurodos);
+    border-radius: 16px;
+    background-color: var(--colorazulclarouno);
+}
+
+.copy{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--colorgrisclaro);
+}
+
+/* Pie de página */
+.footer {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--coloruno);
+    background-color: var(--colorazuloscurouno);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsivo */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .header {
+        margin: 20px;
+        text-align: center;
+    }
+
+    .contenido {
+        margin: 0 auto;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .text-area {
+        height: 150px;
+        font-size: 1.2rem;
+    }
+
+    .caja__lateral {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .resultado {
+        height: 150px;
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contenido {
+        margin: 20px;
+    }
+
+    .caja__lateral {
+        margin-top: 20px;
+    }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    main {
+        justify-content: space-between;
+    }
+
+    .contenido, .caja__lateral {
+        margin-top: 40px;
+    }
+}
